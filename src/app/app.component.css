@@ -1,0 +1,47 @@
+.frontend-form {   
+    width: 100%;    
+  }  
+  .frontend-toolbar {   
+    width: 100%;
+    text-align: center;  
+  }  
+  .frontend-full-width {
+    width: 40%;
+    text-align: center;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }  
+  .f-button{ 
+    text-align: center;
+    position: absolute;
+    top: 20%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+
+  }
+  .f-frame{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;  
+    height: 100%;
+   
+  }
+  .f-iframe{
+      width: 40%; 
+      padding-top: 2%;
+      height: 90%;      
+  }
+  .f-list{    
+    position: relative; 
+    margin:auto;
+}
+.f-list-item{
+  padding-left: 25%
+}
+
+ 
