@@ -1,7 +1,7 @@
 <form class="frontend-form">
   <div style="position: relative; margin:auto; height:100px">
     <mat-toolbar>
-      <span class="frontend-toolbar">Welcome to Video Application</span>
+      <span class="frontend-toolbar">{{labels.inpuTxt}}</span>
     </mat-toolbar>
   </div>
   <div style="position: relative; margin:auto; height:70px">
@@ -9,7 +9,7 @@
       <input matInput [(ngModel)]="videoURL" name="videoURL" placeholder="Enter Video URL" value="">
     </mat-form-field>
 
-    <button mat-button class="f-button" (click)="getIframeVideoUrl()">Click me!</button>
+    <button mat-button class="f-button" (click)="getIframeVideoUrl()">{{labels.btnTxt}}</button>
   </div>
   <div [hidden]='!iframeURL' style="position: relative; margin:auto; padding-top: 20%">
     <div class="f-frame">

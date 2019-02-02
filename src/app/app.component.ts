@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 
 
@@ -14,30 +14,34 @@ export class AppComponent {
   trustedDashboardUrl: SafeUrl;
   urlData = [];
 
+
+  @Input() public labels = {
+    inpuTxt: 'Welcome to Video Application',
+    btnTxt: 'Click me!'
+  };
+
   constructor(private sanitizer: DomSanitizer) {
   }
 
   public getIframeVideoUrl() {
 
     this.setIFrameURL(this.videoURL);
-   
+
   }
 
   setIFrameURL(url: string) {
     if (!url) {
       return '';
     }
-    this.urlData.push(url);  
+    this.urlData.push(url);
     let _url = url.replace('watch', 'embed')
-    this.iframeURL = this.sanitizer.bypassSecurityTrustResourceUrl(_url);   
-    if(this.urlData.length>3)
-    { 
+    this.iframeURL = this.sanitizer.bypassSecurityTrustResourceUrl(_url);
+    if (this.urlData.length > 3) {
       this.urlData.shift();
     }
     this.clearInput();
   }
-  clearInput()
-  {
-    this.videoURL =null;
+  clearInput() {
+    this.videoURL = null;
   }
 }
