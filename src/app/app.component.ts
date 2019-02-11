@@ -32,9 +32,12 @@ export class AppComponent {
     if (!url) {
       return '';
     }
+    console.log(url);
     this.urlData.push(url);
-    let _url = url.replace('watch', 'embed')
+    let _url = url.replace('watch?v=', 'embed/')
+   // let _url = url.replace('watch', 'embed')
     this.iframeURL = this.sanitizer.bypassSecurityTrustResourceUrl(_url);
+    console.log(this.iframeURL);
     if (this.urlData.length > 3) {
       this.urlData.shift();
     }
