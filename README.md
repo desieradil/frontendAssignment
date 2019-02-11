@@ -2,6 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.0.
 
+This APP is hosted here : http://intentadilangular.somee.com/index.html
+
 ## Quick start
 **Make sure you have Node version >= 6.0 and NPM >= 3**
 
