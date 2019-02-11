@@ -1,7 +1,7 @@
 <form class="frontend-form">
   <div style="position: relative; margin:auto; height:100px">
     <mat-toolbar>
-      <span class="frontend-toolbar">{{labels.inpuTxt}}</span>
+      <span class="frontend-toolbar">{{labels.hdeaderTxt}}</span>
     </mat-toolbar>
   </div>
   <div style="position: relative; margin:auto; height:70px">
@@ -11,15 +11,15 @@
 
     <button mat-button class="f-button" (click)="getIframeVideoUrl()">{{labels.btnTxt}}</button>
   </div>
-  <div [hidden]='!iframeURL' style="position: relative; margin:auto; padding-top: 20%">
-    <div class="f-frame">
+  <div  style="position: relative; margin:auto; padding-top: 20%; border: 1px solid black; width: 40%">
+    <div [hidden]='!iframeURL' class="f-frame">
       <iframe id="video" class="f-iframe" [src]="iframeURL" frameborder="0" allowfullscreen></iframe>
     </div>
   </div>
   <div [hidden]="!urlData" class="f-list">
     <mat-list class="f-list-item" role="list">
-      <mat-list-item role="listitem" *ngFor="let url of urlData">
-        <mat-icon>link</mat-icon>{{url}}
+      <mat-list-item role="listitem" *ngFor="let url of urlData">        
+        <p matLine>{{url}}</p>
       </mat-list-item>
     </mat-list>
   </div>

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
+import { DomSanitizer, SafeUrl,SafeResourceUrl  } from '@angular/platform-browser';
 
 
 @Component({
@@ -10,13 +10,12 @@ import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 export class AppComponent {
   title = 'frontend';
   videoURL: string = '';
-  iframeURL: SafeUrl
-  trustedDashboardUrl: SafeUrl;
+  iframeURL: SafeUrl;    
   urlData = [];
 
 
   @Input() public labels = {
-    inpuTxt: 'Welcome to Video Application',
+    hdeaderTxt :'Welcome to Video Application',  
     btnTxt: 'Click me!'
   };
 
